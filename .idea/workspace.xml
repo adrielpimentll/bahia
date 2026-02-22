@@ -15,6 +15,14 @@
       <change afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/secretariaescolar/controller/CadastroServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/login/cadastrar.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/login/criar_login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/secretariaescolar/controller/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/secretariaescolar/controller/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/secretariaescolar/dao/AlunoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/secretariaescolar/dao/AlunoDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/login/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/login/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/login/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/login/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -403,7 +411,8 @@
       <workItem from="1771460957860" duration="7184000" />
       <workItem from="1771499363494" duration="2307000" />
       <workItem from="1771702653238" duration="14597000" />
-      <workItem from="1771724956704" duration="1259000" />
+      <workItem from="1771724956704" duration="1790000" />
+      <workItem from="1771733692033" duration="9548000" />
     </task>
     <servers />
   </component>

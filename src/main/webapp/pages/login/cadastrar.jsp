@@ -17,14 +17,17 @@
     </button>
 </header>
 
-<div class="titulo-login">Login</div>
+<div class="titulo-login">Cadastro</div>
 <div class="linha"></div>
 
 <div class="container">
 
     <div class="card">
 
-        <h1>Bem-vindo à Devant!</h1>
+        <h1>Verifique sua matrícula</h1>
+
+        <br>
+        <br>
 
         <%
             String erro = (String) request.getAttribute("erro");
@@ -33,15 +36,16 @@
         <div class="erro"><%= erro %></div>
         <% } %>
 
-        <form action="<%= request.getContextPath() %>/login" method="post">
+        <form action="<%= request.getContextPath() %>/cadastro" method="post">
             <input type="hidden" name="cargo" value="aluno">
 
-            <input class="input" type="text" name="username" placeholder="Email" required>
-            <input class="input" type="password" name="password" placeholder="Senha" required>
+            <input class="input" type="text" name="matricula" placeholder="Matrícula" required>
 
+            <br>
+            <br>
 
             <button type="submit" class="btn-entrar">
-                <span>Entrar</span>
+                <span>Próximo</span>
 
                 <svg width="7" height="12" viewBox="0 0 7 12" fill="none"
                      xmlns="http://www.w3.org/2000/svg">
@@ -59,25 +63,16 @@
         </form>
 
         <div class="cadastro">
-            Não tem login? <a href="cadastrar.jsp">Cadastre-se</a>
+            <a href="index.jsp">Voltar</a>
         </div>
 
-        <div class="seletor-interno">
-            Você está entrando como:
-        </div>
     </div>
-        <div class="tipo-wrapper">
+    <div class="tipo-wrapper">
 
-            <button class="tipo tipo-ativo">
-                Aluno
-            </button>
-
-            <button class="tipo tipo-inativo"
-                    onclick="window.location.href='<%= request.getContextPath() %>/pages/login/login_prof.jsp'">
-                Professor
-            </button>
-
-        </div>
+        <button class="tipo tipo-ativo">
+            Aluno
+        </button>
+    </div>
 </div>
 
 </body>

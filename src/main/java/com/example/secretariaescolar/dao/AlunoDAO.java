@@ -48,29 +48,29 @@ public class AlunoDAO {
     // buscarPorMatricula(matricula): Método essencial para o professor encontrar o
     // aluno.
 
-    public Aluno buscarPorMatricula(String matricula) {
-        String sql = "SELECT u.id_user, u.nome, u.login, u.senha, a.matricula " +
-                "FROM Usuario u " +
-                "INNER JOIN Aluno a ON u.id_user = a.id_user " +
-                "WHERE a.matricula = ?";
+    public Integer buscarIdPorMatricula(String matricula) {
+
+        String sql = """
+                SELECT id_aluno
+                FROM aluno
+                WHERE matricula = ?
+                """;
 
         try (Connection conn = Conexao.conectar();
-                PreparedStatement pstmt = conn.prepareStatement(sql)) {
-            pstmt.setString(1, matricula);
-            try (ResultSet rset = pstmt.executeQuery()) {
-                if (rset.next()) {
-                    Aluno aluno = new Aluno();
-                    aluno.setId_user(rset.getInt("id_aluno"));
-                    aluno.setNome(rset.getString("nome"));
-                    aluno.setLogin(rset.getString("login"));
-                    aluno.setSenha(rset.getString("senha"));
-                    aluno.setMatricula(rset.getString("matricula"));
-                    return aluno;
-                }
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+            stmt.setString(1, matricula);
+
+            ResultSet rs = stmt.executeQuery();
+
+            if (rs.next()) {
+                return rs.getInt("id_aluno"); // já é o id_user
             }
-        } catch (SQLException e) {
-            System.err.println("Erro ao buscar o aluno: " + e.getMessage());
+
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+
         return null;
     }
 

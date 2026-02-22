@@ -28,15 +28,18 @@ public class LoginServlet extends HttpServlet {
         String proxima = "";
         String paginaLogin = "";
 
+        // Define tipo de usuário e páginas
         if ("aluno".equals(cargo)) {
             idTipoUser = 1;
             proxima = "pages/aluno/dashboard.jsp";
             paginaLogin = "/pages/login/index.jsp";
-        } else if ("professor".equals(cargo)) {
+        }
+        else if ("professor".equals(cargo)) {
             idTipoUser = 2;
             proxima = "pages/professor/dashboard.jsp";
             paginaLogin = "/pages/login/login_prof.jsp";
-        } else if ("adm".equals(cargo)) {
+        }
+        else if ("adm".equals(cargo)) {
             idTipoUser = 3;
             proxima = "pages/adm/dashboard.jsp";
             paginaLogin = "/pages/login/login_adm.jsp";
@@ -50,11 +53,39 @@ public class LoginServlet extends HttpServlet {
             session.setAttribute("usuario", email);
             session.setAttribute("cargo", cargo);
 
+            // Se for aluno, zera tentativas ao logar
+            if ("aluno".equals(cargo)) {
+                session.removeAttribute("tentativasAluno");
+            }
+
             response.sendRedirect(proxima);
 
         } else {
 
-            request.setAttribute("erro", "Usuário ou senha inválidos.");
+            // Controle de tentativas apenas para ALUNO
+            if ("aluno".equals(cargo)) {
+
+                HttpSession session = request.getSession();
+                Integer tentativas = (Integer) session.getAttribute("tentativasAluno");
+
+                if (tentativas == null) {
+                    tentativas = 0;
+                }
+
+                tentativas++;
+                session.setAttribute("tentativasAluno", tentativas);
+
+                if (tentativas >= 3) {
+                    request.setAttribute("erro",
+                            "Você errou 3 vezes. Talvez seja necessário validar sua matrícula antes de cadastrar seu email e senha. Por favor, clique em 'Cadastre-se' abaixo.");
+                } else {
+                    request.setAttribute("erro", "Usuário ou senha inválidos.");
+                }
+
+            } else {
+                request.setAttribute("erro", "Usuário ou senha inválidos.");
+            }
+
             request.getRequestDispatcher(paginaLogin)
                     .forward(request, response);
         }
