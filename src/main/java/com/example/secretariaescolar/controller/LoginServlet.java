@@ -1,12 +1,10 @@
 package com.example.secretariaescolar.controller;
 
 import com.example.secretariaescolar.dao.LoginDAO;
+import com.example.secretariaescolar.model.Usuario;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.HttpSession;
+import jakarta.servlet.http.*;
 
 import java.io.IOException;
 
@@ -18,76 +16,66 @@ public class LoginServlet extends HttpServlet {
                           HttpServletResponse response)
             throws ServletException, IOException {
 
-        String email = request.getParameter("username");
+        String login = request.getParameter("username");
         String senha = request.getParameter("password");
         String cargo = request.getParameter("cargo");
 
         LoginDAO loginDAO = new LoginDAO();
+        Usuario usuario = loginDAO.autenticar(login, senha);
 
-        int idTipoUser = 0;
-        String proxima = "";
-        String paginaLogin = "";
+        HttpSession session = request.getSession();
 
-        // Define tipo de usuário e páginas
+        if (usuario != null) {
+
+            int tipo = usuario.getId_tipo_user();
+
+            if (
+                    ("aluno".equals(cargo) && tipo == 1) ||
+                            ("professor".equals(cargo) && tipo == 2) ||
+                            ("adm".equals(cargo) && tipo == 3)
+            ) {
+
+                session.setAttribute("usuario", usuario);
+
+                if (tipo == 1) {
+                    session.removeAttribute("tentativasAluno");
+                }
+
+                if (tipo == 1) {
+                    response.sendRedirect("pages/aluno/dashboard.jsp");
+                } else if (tipo == 2) {
+                    response.sendRedirect("pages/professor/dashboard.jsp");
+                } else {
+                    response.sendRedirect("pages/adm/dashboard.jsp");
+                }
+
+                return;
+            }
+        }
+
         if ("aluno".equals(cargo)) {
-            idTipoUser = 1;
-            proxima = "pages/aluno/dashboard.jsp";
-            paginaLogin = "/pages/login/index.jsp";
-        }
-        else if ("professor".equals(cargo)) {
-            idTipoUser = 2;
-            proxima = "pages/professor/dashboard.jsp";
-            paginaLogin = "/pages/login/login_prof.jsp";
-        }
-        else if ("adm".equals(cargo)) {
-            idTipoUser = 3;
-            proxima = "pages/adm/dashboard.jsp";
-            paginaLogin = "/pages/login/login_adm.jsp";
-        }
 
-        boolean autenticado = loginDAO.autenticar(email, senha, idTipoUser);
+            Integer tentativas = (Integer) session.getAttribute("tentativasAluno");
 
-        if (autenticado) {
-
-            HttpSession session = request.getSession();
-            session.setAttribute("usuario", email);
-            session.setAttribute("cargo", cargo);
-
-            // Se for aluno, zera tentativas ao logar
-            if ("aluno".equals(cargo)) {
-                session.removeAttribute("tentativasAluno");
+            if (tentativas == null) {
+                tentativas = 0;
             }
 
-            response.sendRedirect(proxima);
+            tentativas++;
+            session.setAttribute("tentativasAluno", tentativas);
 
-        } else {
-
-            // Controle de tentativas apenas para ALUNO
-            if ("aluno".equals(cargo)) {
-
-                HttpSession session = request.getSession();
-                Integer tentativas = (Integer) session.getAttribute("tentativasAluno");
-
-                if (tentativas == null) {
-                    tentativas = 0;
-                }
-
-                tentativas++;
-                session.setAttribute("tentativasAluno", tentativas);
-
-                if (tentativas >= 3) {
-                    request.setAttribute("erro",
-                            "Você errou 3 vezes. Talvez seja necessário validar sua matrícula antes de cadastrar seu email e senha. Por favor, clique em 'Cadastre-se' abaixo.");
-                } else {
-                    request.setAttribute("erro", "Usuário ou senha inválidos.");
-                }
-
+            if (tentativas >= 3) {
+                request.setAttribute("erro",
+                        "Você errou 3 vezes. Talvez seja necessário validar sua matrícula antes de cadastrar seu login e senha. Clique em 'Cadastre-se'.");
             } else {
                 request.setAttribute("erro", "Usuário ou senha inválidos.");
             }
 
-            request.getRequestDispatcher(paginaLogin)
-                    .forward(request, response);
+        } else {
+            request.setAttribute("erro", "Usuário ou senha inválidos.");
         }
+
+        request.getRequestDispatcher("/pages/login/index.jsp")
+                .forward(request, response);
     }
 }

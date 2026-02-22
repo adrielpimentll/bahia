@@ -1,47 +1,51 @@
 package com.example.secretariaescolar.model;
 
 public class Aluno extends Usuario {
-    private int idAluno;
+
+    private int id_aluno;
     private String matricula;
-    private int idTurma;
+    private int id_turma;
 
-    public Aluno(int idAluno, String matricula, int idTurma, String nome, String email, String senha, int id_tipoUser) {
-        super(nome, email, senha, id_tipoUser);
-        this.idAluno = idAluno;
+    public Aluno(int id_aluno, String matricula, int id_turma,
+                 String nome, String login, String senha, int id_tipo_user) {
+
+        super(nome, login, senha, id_tipo_user);
+        this.id_aluno = id_aluno;
         this.matricula = matricula;
-        this.idTurma = idTurma;
+        this.id_turma = id_turma;
     }
 
-    public Aluno(String matricula, int idTurma, String nome, String email, String senha, int id_tipoUser) {
-        super(nome, email, senha, id_tipoUser);
+    public Aluno(String matricula, int id_turma,
+                 String nome, String login, String senha, int id_tipo_user) {
+
+        super(nome, login, senha, id_tipo_user);
         this.matricula = matricula;
-        this.idTurma = idTurma;
+        this.id_turma = id_turma;
     }
 
-    public Aluno() {
+    public Aluno() {}
+
+    public int getId_aluno() {
+        return id_aluno;
     }
 
-    public int getIdAluno() {
-        return idAluno;
+    public void setId_aluno(int id_aluno) {
+        this.id_aluno = id_aluno;
     }
 
     public String getMatricula() {
         return matricula;
     }
 
-    public int getIdTurma() {
-        return idTurma;
-    }
-
-    public void setIdAluno(int idAluno) {
-        this.idAluno = idAluno;
-    }
-
     public void setMatricula(String matricula) {
         this.matricula = matricula;
     }
 
-    public void setIdTurma(int idTurma) {
-        this.idTurma = idTurma;
+    public int getId_turma() {
+        return id_turma;
+    }
+
+    public void setId_turma(int id_turma) {
+        this.id_turma = id_turma;
     }
 }
