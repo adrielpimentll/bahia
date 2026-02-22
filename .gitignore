@@ -12,7 +12,7 @@ target/
 *.iws
 *.iml
 *.ipr
-*.env
+src/main/resources/.env
 
 ### Eclipse ###
 .apt_generated
@@ -42,3 +42,4 @@ build/
 .env
 *.env
 out/
+out/artifacts/Devant_war_exploded/WEB-INF/classes/.env

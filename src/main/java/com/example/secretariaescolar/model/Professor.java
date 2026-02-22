@@ -19,3 +19,4 @@ public class Professor extends Usuario {
     public void setId_professor(int id_professor) {
         this.id_professor = id_professor;
     }
+}

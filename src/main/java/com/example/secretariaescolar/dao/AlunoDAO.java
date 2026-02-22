@@ -16,7 +16,7 @@ import com.example.secretariaescolar.util.Conexao;
 
 public class AlunoDAO {
     // cadastrar(Aluno): Insere o nome, matrícula, email(login ) e senha.
-    public void cadastrar(Aluno aluno) {
+    public boolean cadastrar(Aluno aluno) {
         UsuarioDAO usuarioDAO = new UsuarioDAO();
 
         int idGerado = usuarioDAO.inserir(aluno);
@@ -35,11 +35,14 @@ public class AlunoDAO {
                 pstmt.executeUpdate();
                 System.out.println("Aluno cadastrado com sucesso! ID Usuario: " + idGerado);
 
+                return true; // Sucesso
             } catch (SQLException e) {
                 System.err.println("Erro ao inserir na tabela Aluno: " + e.getMessage());
+                return false; // Erro
             }
         } else {
             System.err.println("Erro: Não foi possível criar a base de Usuário.");
+            return false; // Erro
         }
     }
     // buscarPorMatricula(matricula): Método essencial para o professor encontrar o

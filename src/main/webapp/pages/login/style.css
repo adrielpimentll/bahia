@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('fundo login.jpg') no-repeat left center;
+  background-size: cover;
+}
+
+header {
+  background-color: #294c56;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 60px;
+}
+
+header img {
+  height: 35px;
+}
+
+.botao-adm {
+  background-color: #203c44;
+  color: white;
+  border: none;
+  padding: 8px 25px;
+  border-radius: 20px;
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+header:hover .botao-adm {
+  opacity: 1;
+}
+
+.titulo-login {
+  padding: 40px 0 10px 80px;
+  font-size: 22px;
+  color: #294c56;
+}
+
+.linha {
+  height: 2px;
+  width: 85%;
+  background-color: #294c56;
+  margin-left: 80px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+/* CARD */
+.card {
+  width: 600px;
+  background: #f5f5f5;
+  padding: 30px 80px;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0px 15px 30px rgba(0,0,0,0.12);
+  text-align: center;
+}
+
+.card h1 {
+  font-size: 26px;
+  font-weight: 600;
+  color: #7c88a5;
+  margin-bottom: 40px;
+}
+
+.input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  background-color: #f0f0f0;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #294c56;
+}
+
+.btn-entrar {
+  background-color: #274855;
+  border-radius: 12px;
+  padding: 10px 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: clamp(180px, 22vw, 280px);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: opacity 0.2s ease;
+  margin: 0 auto;
+}
+
+.btn-entrar span {
+  color: #fafafa;
+  font-size: 14px;
+}
+
+.btn-entrar:hover {
+  opacity: 0.9;
+}
+
+.cadastro {
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.cadastro a {
+  color: #294c56;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.erro {
+  color: red;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.seletor-interno {
+  padding-top: 100px;
+  margin-left: -65px;
+  font-size: 14px;
+  color: #7c88a5;
+  text-align: left;
+}
+
+/* BOTÕES */
+.tipo-wrapper {
+  width: 200px;
+  display: flex;
+  margin-left: -400px;
+}
+
+.tipo {
+  flex: 1;
+  padding: 14px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 0 0 16px 16px;
+}
+
+.tipo-ativo {
+  background-color: #274855;
+  color: #fafafa;
+}
+
+.tipo-inativo {
+  background-color: #cfd5e6;
+  color: #3d4b63;
+}

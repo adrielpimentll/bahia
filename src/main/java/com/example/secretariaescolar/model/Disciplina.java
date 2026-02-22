@@ -9,6 +9,8 @@ public class Disciplina {
         this.id_disciplina = id_disciplina;
     }
 
+    public Disciplina(){}
+
     public Disciplina(int id_disciplina, String nome) {
         this.id_disciplina = id_disciplina;
         this.nome = nome;
