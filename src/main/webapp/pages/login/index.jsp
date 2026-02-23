@@ -12,7 +12,7 @@
     <img src="<%= request.getContextPath() %>/pages/login/logo.png">
 
     <button class="botao-adm"
-            onclick="window.location.href='<%= request.getContextPath() %>/login_adm.jsp'">
+            onclick="window.location.href='<%= request.getContextPath() %>/pages/login/login_adm.jsp'">
         ADM
     </button>
 </header>
@@ -59,7 +59,7 @@
         </form>
 
         <div class="cadastro">
-            Não tem login? <a href="cadastrar.jsp">Cadastre-se</a>
+            Não tem login? <a href="<%= request.getContextPath() %>/pages/login/cadastrar.jsp">Cadastre-se</a>
         </div>
 
         <div class="seletor-interno">

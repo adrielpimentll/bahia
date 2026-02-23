@@ -40,5 +40,7 @@ public class AlunoServlet extends HttpServlet {
             // Redirecionando após cadastro
             response.sendRedirect("pages/aluno/lista-index.jsp");
         }
+
+
     }
 }

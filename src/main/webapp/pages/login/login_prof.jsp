@@ -13,7 +13,7 @@
     <img src="<%= request.getContextPath() %>/pages/login/logo.png">
 
     <button class="botao-adm"
-            onclick="window.location.href='<%= request.getContextPath() %>/login-adm.jsp'">
+            onclick="window.location.href='<%= request.getContextPath() %>/pages/login/login_adm.jsp'">
         ADM
     </button>
 </header>

@@ -94,4 +94,35 @@ public class AlunoDAO {
 
         return lista;
     }
+
+    public boolean podeCadastrarLogin(String matricula) {
+
+        String sql = """
+        SELECT u.login, u.senha
+        FROM aluno a
+        INNER JOIN usuario u ON a.id_user = u.id_user
+        WHERE a.matricula = ?
+    """;
+
+        try (Connection conn = Conexao.conectar();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+            stmt.setString(1, matricula);
+            ResultSet rs = stmt.executeQuery();
+
+            if (rs.next()) {
+
+                String login = rs.getString("login");
+                String senha = rs.getString("senha");
+
+                // Se ambos forem NULL, pode cadastrar
+                return login == null && senha == null;
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return false; // matrícula não existe ou erro
+    }
 }

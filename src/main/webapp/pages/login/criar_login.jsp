@@ -11,10 +11,6 @@
 <header>
     <img src="<%= request.getContextPath() %>/pages/login/logo.png">
 
-    <button class="botao-adm"
-            onclick="window.location.href='<%= request.getContextPath() %>/login_adm.jsp'">
-        ADM
-    </button>
 </header>
 
 <div class="titulo-login">Cadastro</div>
@@ -65,6 +61,12 @@
                 </svg>
             </button>
         </form>
+
+        <div class="cadastro">
+            <a href="<%= request.getContextPath() %>/pages/login/index.jsp">
+                Voltar
+            </a>
+        </div>
     </div>
     <div class="tipo-wrapper">
 
@@ -100,7 +102,6 @@
             return false;
         }
 
-        // Se estiver ok, abre o modal
         document.getElementById("modalConfirmacao").style.display = "flex";
         return false;
     }

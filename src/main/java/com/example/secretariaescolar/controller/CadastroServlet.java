@@ -19,27 +19,28 @@ public class CadastroServlet extends HttpServlet {
         String senha = request.getParameter("password");
 
         HttpSession session = request.getSession();
-        Integer idUser = (Integer) session.getAttribute("idUserCadastro");
+        String matricula = (String) session.getAttribute("matriculaCadastro");
 
-        if (idUser == null) {
+        if (matricula == null) {
             response.sendRedirect("pages/login/cadastrar.jsp");
             return;
         }
-
-        // Precisamos da matrícula novamente
-        // então o ideal é guardar ela na sessão na tela anterior
-        String matricula = (String) session.getAttribute("matriculaCadastro");
 
         UsuarioDAO usuarioDAO = new UsuarioDAO();
         boolean atualizado = usuarioDAO.cadastrarInfos(matricula, email, senha);
 
         if (atualizado) {
-            session.removeAttribute("idUserCadastro");
+
             session.removeAttribute("matriculaCadastro");
 
-            response.sendRedirect("pages/login/login.jsp");
+            response.sendRedirect("pages/login/index.jsp");
+
         } else {
-            request.setAttribute("erro", "Erro ao finalizar cadastro.");
+
+            request.setAttribute("erro",
+                    "Esta matrícula já possui login cadastrado. " +
+                            "Por favor, clique em 'Voltar' e faça o login.");
+
             request.getRequestDispatcher("/pages/login/criar_login.jsp")
                     .forward(request, response);
         }

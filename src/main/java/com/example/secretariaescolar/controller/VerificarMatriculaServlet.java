@@ -17,20 +17,30 @@ public class VerificarMatriculaServlet extends HttpServlet {
 
         String matricula = request.getParameter("matricula");
 
-        AlunoDAO alunoDAO = new AlunoDAO();
-        Integer idUser = alunoDAO.buscarIdPorMatricula(matricula);
+        if (matricula == null || matricula.trim().isEmpty()) {
+            request.setAttribute("erro", "Por favor, informe a matrícula.");
+            request.getRequestDispatcher("/pages/login/cadastrar.jsp")
+                    .forward(request, response);
+            return;
+        }
 
-        if (idUser != null) {
+        AlunoDAO alunoDAO = new AlunoDAO();
+
+        boolean podeCadastrar = alunoDAO.podeCadastrarLogin(matricula);
+
+        if (podeCadastrar) {
 
             HttpSession session = request.getSession();
-            session.setAttribute("idUserCadastro", idUser);
             session.setAttribute("matriculaCadastro", matricula);
 
             response.sendRedirect("pages/login/criar_login.jsp");
 
         } else {
 
-            request.setAttribute("erro", "Matrícula não encontrada.");
+            request.setAttribute("erro",
+                    "Esta matrícula já possui login cadastrado. " +
+                            "Por favor, clique em 'Voltar' e faça o login.");
+
             request.getRequestDispatcher("/pages/login/cadastrar.jsp")
                     .forward(request, response);
         }

@@ -11,10 +11,6 @@
 <header>
     <img src="<%= request.getContextPath() %>/pages/login/logo.png">
 
-    <button class="botao-adm"
-            onclick="window.location.href='<%= request.getContextPath() %>/login_adm.jsp'">
-        ADM
-    </button>
 </header>
 
 <div class="titulo-login">Cadastro</div>
@@ -63,7 +59,9 @@
         </form>
 
         <div class="cadastro">
-            <a href="index.jsp">Voltar</a>
+            <a href="<%= request.getContextPath() %>/pages/login/index.jsp">
+                Voltar
+            </a>
         </div>
 
     </div>
