@@ -27,6 +27,7 @@ public class ProfessorDAO {
                     professor.setLogin(rset.getString("login"));
                     professor.setSenha(rset.getString("senha"));
                     professor.setId_professor(rset.getInt("id_professor"));
+                    professor.setId_disciplina(rset.getInt("id_disciplina"));
 
                     return professor;
                 }
