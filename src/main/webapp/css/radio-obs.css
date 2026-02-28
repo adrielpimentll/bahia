@@ -1,0 +1,9 @@
+input[type="radio"]:checked {
+    background-color: #274855;
+    border-color: #274855;
+}
+
+input[type="radio"]:checked::before {
+    transform: scale(1);
+    background-color: white;
+}
