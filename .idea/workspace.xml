@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="b3f4bc5b-d1de-45cd-bc65-255443bb2260" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,7 +43,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "last_opened_file_path": "C:/Users/guilhermenorcia-ieg/OneDrive - Instituto J&F/materias/POO/Devant-real/src/main/webapp/WEB-INF/pages/aluno",
+    "last_opened_file_path": "C:/Users/guilhermenorcia-ieg/OneDrive - Instituto J&F/materias/POO/Devant-real/src/main/webapp/WEB-INF/pages/adm",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -48,6 +51,14 @@
     "nodejs_package_manager_path": "npm"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\guilhermenorcia-ieg\OneDrive - Instituto J&amp;F\materias\POO\Devant-real\src\main\webapp\WEB-INF\pages\adm" />
+      <recent name="C:\Users\guilhermenorcia-ieg\OneDrive - Instituto J&amp;F\materias\POO\Devant-real\src\main\webapp\WEB-INF\pages\professor" />
+      <recent name="C:\Users\guilhermenorcia-ieg\OneDrive - Instituto J&amp;F\materias\POO\Devant-real\src\main\webapp\assets" />
+      <recent name="C:\Users\guilhermenorcia-ieg\OneDrive - Instituto J&amp;F\materias\POO\Devant-real\src\main\webapp\WEB-INF\pages\aluno" />
+    </key>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="b3f4bc5b-d1de-45cd-bc65-255443bb2260" name="Changes" comment="" />
@@ -55,7 +66,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1772317783483</updated>
-      <workItem from="1772317784587" duration="326000" />
+      <workItem from="1772317784587" duration="2070000" />
     </task>
     <servers />
   </component>
