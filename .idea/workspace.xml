@@ -9,7 +9,40 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8ba3ed6-07e3-48b7-a7c9-a388cea4a781" name="Changes" comment="" />
+    <list default="true" id="e8ba3ed6-07e3-48b7-a7c9-a388cea4a781" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretariaEscolar-main/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretariaEscolar-main/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretariaEscolar-main/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretariaEscolar-main/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretariaEscolar-main/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretariaEscolar-main/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretariaEscolar-main/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretariaEscolar-main/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretariaEscolar-main/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretariaEscolar-main/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretariaEscolar-main/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretariaEscolar-main/src/main/java/com/example/secretariaescolar/dao/AlunoDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretariaEscolar-main/src/main/java/com/example/secretariaescolar/dao/DisciplinaDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretariaEscolar-main/src/main/java/com/example/secretariaescolar/dao/NotaDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretariaEscolar-main/src/main/java/com/example/secretariaescolar/dao/ObservacaoDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretariaEscolar-main/src/main/java/com/example/secretariaescolar/dao/ProfessorDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretariaEscolar-main/src/main/java/com/example/secretariaescolar/dao/TurmaDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretariaEscolar-main/src/main/java/com/example/secretariaescolar/dao/UsuarioDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretariaEscolar-main/src/main/java/com/example/secretariaescolar/dto/AlunoDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretariaEscolar-main/src/main/java/com/example/secretariaescolar/dto/UsuarioDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretariaEscolar-main/src/main/java/com/example/secretariaescolar/model/Aluno.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretariaEscolar-main/src/main/java/com/example/secretariaescolar/model/Disciplina.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretariaEscolar-main/src/main/java/com/example/secretariaescolar/model/Nota.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretariaEscolar-main/src/main/java/com/example/secretariaescolar/model/Observacao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretariaEscolar-main/src/main/java/com/example/secretariaescolar/model/Professor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretariaEscolar-main/src/main/java/com/example/secretariaescolar/model/ProfessorDisciplina.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretariaEscolar-main/src/main/java/com/example/secretariaescolar/model/TipoUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretariaEscolar-main/src/main/java/com/example/secretariaescolar/model/Turma.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretariaEscolar-main/src/main/java/com/example/secretariaescolar/model/Usuario.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretariaEscolar-main/src/main/java/com/example/secretariaescolar/util/Conexao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretariaEscolar-main/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -415,7 +448,7 @@
       <workItem from="1771781930176" duration="5406000" />
       <workItem from="1771797042051" duration="1411000" />
       <workItem from="1771809297728" duration="5284000" />
-      <workItem from="1772313730194" duration="340000" />
+      <workItem from="1772313730194" duration="1558000" />
     </task>
     <servers />
   </component>
