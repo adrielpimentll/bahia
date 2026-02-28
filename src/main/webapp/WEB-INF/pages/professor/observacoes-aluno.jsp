@@ -1,5 +1,7 @@
-<!DOCTYPE jspperfil-prof.jspl>
-<jspperfil-prof.jspl lang="pt-br">
+<%@ page contentType="text/html; charset=UTF-8" %>
+
+<!DOCTYPE html>
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
