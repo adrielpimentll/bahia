@@ -6,7 +6,7 @@ public class Nota {
     private String titulo;
     private double valor;
     private String semestre;
-    private int id_aluno;
+    private int id_aluno;/
     private int id_professorDisciplina;
 
     public Nota() {

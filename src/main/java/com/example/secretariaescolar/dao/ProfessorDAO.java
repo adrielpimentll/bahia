@@ -11,7 +11,7 @@ import com.example.secretariaescolar.util.Conexao;
 public class ProfessorDAO {
 
     public Professor buscaPorUsuario(int id_user) {
-        String sql = "SELECT u.id_user, u.nome, u.login, u.senha, p.id_professor " +
+        String sql = "SELECT u.id_user, u.nome, u.login, u.senha, p.id_professor, p.id_disciplina " +
                 "FROM Usuario u " +
                 "INNER JOIN Professor p ON u.id_user = p.id_user " +
                 "WHERE u.id_user = ?";

@@ -125,4 +125,25 @@ public class AlunoDAO {
 
         return false; // matrícula não existe ou erro
     }
+
+    public Integer buscarIdPorUsuario(int idUser) {
+
+        String sql = "SELECT id_aluno FROM aluno WHERE id_user = ?";
+
+        try (Connection conn = Conexao.conectar();
+            PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+            stmt.setInt(1, idUser);
+            ResultSet rs = stmt.executeQuery();
+
+            if (rs.next()) {
+                return rs.getInt("id_aluno");
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
 }
