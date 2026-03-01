@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem;
+    background-color: #619AD6;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header img {
+    width: 2%;
+}
+
+.botao-adm {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #619AD6;
+    color: #619AD6;
+    padding: 1rem;
+    padding-right: 1rem;
+    width: 100px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+}
+
+.botao-adm:hover {
+    color: #ffffff;
+    background-color: #4e7cac;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/assets/image-2.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    background-color: #EDEFEF;
+}
+
+input[type="radio"]:checked {
+    background-color: #619AD6;
+    border-color: #619AD6;
+}
+
+input[type="radio"]:checked::before {
+    transform: scale(1);
+    background-color: white;
+}
+
+.login-container {
+    margin-top: -7%;
+}
