@@ -19,7 +19,7 @@
   <header class="text-white shadow-md">
     <div class="max-w-7xl mx-auto px-0 py-3 flex items-center">
       <div class="flex-1" style="margin-left: -50px; margin-right: 40px;">
-        <a href="${pageContext.request.contextPath}/perfil-prof.htm">
+        <a href="${pageContext.request.contextPath}/professor/perfil-prof.jsp">
           <img src="${pageContext.request.contextPath}/assets/logo.png" alt="Logo" class="h-9">
         </a>
       </div>
@@ -27,19 +27,19 @@
       <nav class="nav flex-1 flex justify-center mb-[-1%]">
         <ul class="flex gap-12 items-center">
           <li>
-            <a href="${pageContext.request.contextPath}/perfil-prof.htm" class="nav-link flex items-center gap-2 hover:opacity-80 text-[120%]">
+            <a href="${pageContext.request.contextPath}/professor/perfil-prof.jsp" class="nav-link flex items-center gap-2 hover:opacity-80 text-[120%]">
               Perfil
             </a>
           </li>
 
           <li>
-            <a href="${pageContext.request.contextPath}/alunos-prof.htm" class="nav-link ativo flex items-center gap-2 hover:opacity-80 text-[120%]">
+            <a href="${pageContext.request.contextPath}/professor/alunos-prof.jsp" class="nav-link ativo flex items-center gap-2 hover:opacity-80 text-[120%]">
               Alunos
             </a>
           </li>
 
           <li>
-            <a href="${pageContext.request.contextPath}/observacoes-prof.htm" class="nav-link flex items-center gap-2 hover:opacity-80 text-[120%]">
+            <a href="${pageContext.request.contextPath}/professor/observacoes-prof.jsp" class="nav-link flex items-center gap-2 hover:opacity-80 text-[120%]">
               Observações
             </a>
           </li>

@@ -66,7 +66,7 @@
         <div class="tipo-wrapper">
 
             <button class="tipo tipo-inativo"
-                    onclick="window.location.href='<%= request.getContextPath() %>/pages/login/index.jsp'">
+                    onclick="window.location.href='<%= request.getContextPath() %>/index.jsp'">
                 Aluno
             </button>
 

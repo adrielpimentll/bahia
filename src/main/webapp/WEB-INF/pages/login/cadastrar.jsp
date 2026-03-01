@@ -3,13 +3,13 @@
 <html>
 <head>
     <title>Instituto Devant</title>
-    <link rel="stylesheet" href="<%= request.getContextPath() %>/pages/login/style.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 </head>
 
 <body>
 
 <header>
-    <img src="<%= request.getContextPath() %>/pages/login/logo.png">
+    <img src="${pageContext.request.contextPath}/assets/logo.png">
 
 </header>
 

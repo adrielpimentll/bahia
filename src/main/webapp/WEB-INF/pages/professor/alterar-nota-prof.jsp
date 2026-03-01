@@ -6,9 +6,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/prof.css">
-    <link rel="stylesheet" href="css/indicador-prof.css">
-    <link rel="icon" href="assets/Group-558.ico">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/prof.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/indicador-prof.css">
+    <link rel="icon" href="${pageContext.request.contextPath}/assets/Group-558.ico">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <title>Alterar Alunos - Devant</title>
@@ -18,7 +18,7 @@
     <header class="text-white shadow-md">
         <div class="max-w-7xl mx-auto px-0 py-3 flex items-center">
             <div class="flex-1" style="margin-left: -50px; margin-right: 40px;">
-                <a href="perfil-prof.htm">
+                <a href="${pageContext.request.contextPath}/professor/perfil-prof.jsp">
                     <img src="assets/logo.png" alt="Logo" class="h-9">
                 </a>
             </div>
@@ -26,20 +26,20 @@
             <nav class="nav flex-1 flex justify-center mb-[-1%]">
                 <ul class="flex gap-12 items-center">
                     <li>
-                        <a href="perfil-prof.htm" class="nav-link flex items-center gap-2 hover:opacity-80 text-[120%]">
+                        <a href="${pageContext.request.contextPath}/professor/perfil-prof.jsp" class="nav-link flex items-center gap-2 hover:opacity-80 text-[120%]">
                             Perfil
                         </a>
                     </li>
 
                     <li>
-                        <a href="alunos-prof.htm"
+                        <a href="${pageContext.request.contextPath}/professor/alunos-prof.jsp"
                             class="nav-link ativo flex items-center gap-2 hover:opacity-80 text-[120%]">
                             Alunos
                         </a>
                     </li>
 
                     <li>
-                        <a href="observacoes-prof.htm"
+                        <a href="${pageContext.request.contextPath}/professor/observacoes-prof.jsp"
                             class="nav-link flex items-center gap-2 hover:opacity-80 text-[120%]">
                             Observações
                         </a>
@@ -49,7 +49,7 @@
             </nav>
 
             <div class="flex-1 flex justify-end">
-                <a href="index.htm"
+                <a href="${pageContext.request.contextPath}/index.jsp"
                     class="flex items-center gap-2 bg-tranparent border-2 border-white text-white font-semibold px-4 py-2 rounded-[20px] hover:bg-[#F01C1C] hover:text-white transition">
                     <i data-feather="log-out"></i> Sair
                 </a>
@@ -59,7 +59,7 @@
     </header>
     <main class="flex-1 p-4">
         <section>
-            <a href="alunos-prof.htm">
+            <a href="${pageContext.request.contextPath}/professor/alunos-prof.jsp">
                 <h1 class="text-left"><i data-feather="arrow-left"></i></h1>
             </a>
             <h1 class="text-[2.25rem] font-bold text-[#333333] mb-8 text-center mt-[2%]" data-aos="fade-down">Alterar
@@ -117,11 +117,12 @@
                     </div>
                 </form>
             </div>
+            </section>
     </main>
     <script>
         feather.replace();
     </script>
-    <script src="js/indicador-aba.js"></script>
+    <script src="${pageContext.request.contextPath}/js/indicador-aba.js"></script>
 </body>
 
 </html>

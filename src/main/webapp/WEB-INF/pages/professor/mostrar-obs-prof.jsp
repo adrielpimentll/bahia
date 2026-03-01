@@ -26,19 +26,19 @@
             <nav class="nav flex-1 flex justify-center mb-[-1%]">
                 <ul class="flex gap-12 items-center">
                     <li>
-                        <a href="perfil-prof.jsp" class="nav-link flex items-center gap-2 hover:opacity-80 text-[120%]">
+                        <a href="${pageContext.request.contextPath}/professor/perfil-prof.jsp" class="nav-link flex items-center gap-2 hover:opacity-80 text-[120%]">
                             Perfil
                         </a>
                     </li>
 
                     <li>
-                        <a href="alunos-prof.jsp" class="nav-link flex items-center gap-2 hover:opacity-80 text-[120%]">
+                        <a href="${pageContext.request.contextPath}/professor/alunos-prof.jsp" class="nav-link flex items-center gap-2 hover:opacity-80 text-[120%]">
                             Alunos
                         </a>
                     </li>
 
                     <li>
-                        <a href="observacoes-prof.jsp"
+                        <a href="${pageContext.request.contextPath}/professor/observacoes-prof.jsp"
                             class="nav-link ativo flex items-center gap-2 hover:opacity-80 text-[120%]">
                             Observações
                         </a>
@@ -59,7 +59,7 @@
 
     <main class="flex-1 p-4">
         <section>
-            <a href="observacoes-prof.jsp">
+            <a href="${pageContext.request.contextPath}/professor/observacoes-prof.jsp">
                 <h1 class="text-left"><i data-feather="arrow-left"></i></h1>
             </a>
             <h1 class="text-[#3a3a3a] font-semibold text-[220%] text-center mb-2">Título da Observação</h1>
