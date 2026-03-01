@@ -1,0 +1,14 @@
+.nav {
+    position: relative;
+}
+
+.indicador {
+    position: absolute;
+    bottom: -75%;
+    margin-left: -1.2%;
+    height: 8px;
+    width: 15px;
+    background: #FAFAFA;
+    border-radius: 6px;
+    transition: all 0.35s ease;
+}
