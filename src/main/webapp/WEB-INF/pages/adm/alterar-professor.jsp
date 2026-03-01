@@ -82,7 +82,7 @@
 
             <div class="bg-white rounded-[15px] shadow-md p-8 max-w-lg mx-auto mt-[3%]" data-aos="fade-up"
                 data-aos-delay="100">
-                <form action="#" method="post">
+                <form class="formPr" action="#" method="post">
                     <div class="mb-6">
                         <label for="nome" class="block text-gray-700 text-sm font-medium mb-2">Nome:</label>
                         <input type="text" id="nome" name="nome"
